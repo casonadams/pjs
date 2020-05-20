@@ -1,12 +1,15 @@
 [package]
 name = "pjs"
-version = "0.1.0"
+version = "0.1.2"
 authors = ["Ryan Thomas <ryan@ryant.org>"]
 edition = "2018"
 description = "Pretty print JSON"
 license = "MIT"
-
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license-file = "LICENSE"
+readme = "README.md"
+keywords = ["cli", "json", "tool"]
+categories = ["command-line-utilities"]
 
 [dependencies]
+clap = "2.33"
+serde_json = "1.0"
