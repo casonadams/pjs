@@ -1,0 +1,12 @@
+[package]
+name = "pjs"
+version = "0.1.0"
+authors = ["Ryan Thomas <ryan@ryant.org>"]
+edition = "2018"
+description = "Pretty print JSON"
+license = "MIT"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
