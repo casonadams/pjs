@@ -1,3 +1,6 @@
+[![Crates Badge](https://img.shields.io/crates/v/pjs)](https://crates.io/crates/pjs)
+[![License: MIT](https://img.shields.io/crates/l/pjs)](LICENSE)
+
 ## PJS - Pretty JSON
 
 A simple CLI tool to take json and output it formatted or minified, this depends

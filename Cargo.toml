@@ -1,6 +1,6 @@
 [package]
 name = "pjs"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Ryan Thomas <ryan@ryant.org>"]
 edition = "2018"
 description = "Pretty print JSON"
