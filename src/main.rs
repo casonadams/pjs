@@ -1,5 +1,5 @@
 use clap::{App, AppSettings, Arg};
-use std::fs::{File, OpenOptions};
+use std::fs::File;
 use std::io;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -40,19 +40,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         None => Box::new(io::stdin()),
     };
 
-    let output: Box<dyn io::Write> = match matches.value_of("output") {
-        Some(o) => Box::new(io::BufWriter::new(
-            OpenOptions::new().create(true).truncate(true).open(o)?,
-        )),
-        None => Box::new(io::stdout()),
-    };
-
     let f: serde_json::value::Value = serde_json::from_reader(input)?;
     if matches.is_present("mini") {
-        serde_json::to_writer(output, &f)?;
+        println!("{}", serde_json::to_string(&f)?);
     } else {
-        serde_json::to_writer_pretty(output, &f)?;
+        println!("{}", serde_json::to_string_pretty(&f)?);
     }
-
     Ok(())
 }
